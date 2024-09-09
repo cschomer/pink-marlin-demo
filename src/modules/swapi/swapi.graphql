@@ -1,0 +1,38 @@
+type StarWarsCharacter {
+  name: String!
+  height: String
+  mass: String
+  hair_color: String
+  skin_color: String
+  eye_color: String
+  birth_year: String
+  gender: Gender
+  homeworld: String
+  films: [String]
+  species: [String]
+  vehicles: [String]
+  starships: [String]
+  created: String
+  edited: String
+  url: String
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  UNKNOWN
+}
+
+type Planet {
+  name: String
+  climate: String
+  terrain: String
+  population: String
+}
+
+type Query {
+  person(id: ID!): Person
+  planet(id: ID!): Planet
+  swapiCharacterById(id: ID!): StarWarsCharacter!
+  swapiCharactersByIds(ids: [ID!]!): [StarWarsCharacter!]!
+}

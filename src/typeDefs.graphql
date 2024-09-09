@@ -1,0 +1,15 @@
+type Person {
+  name: String!
+  age: Int!
+  favoriteCharacters: [StarWarsCharacter!]
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  UNKNOWN
+}
+
+type Query {
+  peopleByName(name: String!): [Person!]!
+}
