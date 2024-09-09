@@ -9,18 +9,17 @@
     "sourceMap": true,
     "allowJs": true,
     "moduleResolution": "node",
-    "rootDir": ".",
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
     "rootDir": "./src",
-    "outDir": "dist"
+    "outDir": "api"
   },
 
   "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules", "dist"],
+  "exclude": ["node_modules", "api"],
   "paths": {
     "@": ["src/*"]
   }
