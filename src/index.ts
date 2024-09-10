@@ -53,7 +53,7 @@ if (env.PORT !== undefined) {
   app.use(express.json());
   httpServer = http.createServer(app);
 
-  const startApolloServer = async (app, httpServer) => {
+  const startApolloServer = async (app: any, httpServer: any) => {
     const server = new ApolloServer({
       typeDefs: await getTypeDefs(),
       resolvers: await getResolvers(),
